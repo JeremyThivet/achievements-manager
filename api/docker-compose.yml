@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres
+    volumes:
+      - postgresql:/var/lib/postgresql/data:delegated
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      POSTGRES_USER: my_app
+      # Set POSTGRES_HOST_AUTH_METHOD to "trust" to
+      # allow passwordless authentication.
+      POSTGRES_HOST_AUTH_METHOD: trust
+
+volumes:
+  postgresql:
+  storage:
