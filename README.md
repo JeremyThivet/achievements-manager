@@ -10,9 +10,14 @@ In Progress
 
 ## Project status
 
+⌛ Work in Progress as of 9th of December 2023
+
+- Backend API: 25%
+- Frontend: 0%
+
 ℹ️ This project is developed for self-education purpose, I wanted to put in practice my knowledge of Ruby on Rails.
 
-I tried to stick with the convention over configuration but wanted to evolve the architecture a bit to better decouple responsabilities among differents components. The project's structure is mainly inspired by the UpGrow project, you can have a look at these resources:
+I tried to stick with the convention over configuration but wanted to evolve the architecture a bit to better decouple responsabilities (and respect SOLID) among differents components. The project's structure is mainly inspired by the UpGrow project, you can have a look at these resources:
 
 - https://github.com/szTheory/upgrow/tree/main/docs/guide
 - https://www.blog.remoterubyonrails.com/rails/ddd/software/architecture/2021/11/30/using-ddd-and-clean-architecture-with-rails
