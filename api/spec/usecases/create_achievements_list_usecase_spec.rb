@@ -26,7 +26,7 @@ RSpec.describe CreateAchievementsListUsecase do
         expect(result.error_type).to eq(Result::INPUT_LED_TO_CONFLICT)
     end
 
-    it 'should return an successful result when achivements_list input does not exist' do
+    it 'should return a successful result when achivements_list input does not exist' do
       # Given
       param = {
         title: "My title",

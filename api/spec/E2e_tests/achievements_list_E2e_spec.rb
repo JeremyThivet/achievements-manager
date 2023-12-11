@@ -40,7 +40,7 @@ RSpec.describe AchievementsListsController, type: :request do
         expect(total_entries_created).to eq(1)
     end
 
-    it 'should crete only one record for the same targetted period' do
+    it 'should create only one record for the same targetted period' do
       # Given
       AchievementsListRecord.delete_all
       json_valid_params = {
