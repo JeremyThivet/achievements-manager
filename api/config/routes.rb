@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :achievements_lists, only: [:create]
+  resources :achievements, only: [:create]
 
 end

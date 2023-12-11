@@ -10,15 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_03_184415) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_11_095912) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "achievements_list", force: :cascade do |t|
+  create_table "achievements", force: :cascade do |t|
+    t.text "content", null: false
+    t.bigint "achievements_list_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["achievements_list_id"], name: "index_achievements_on_achievements_list_id"
+  end
+
+  create_table "achievements_lists", force: :cascade do |t|
     t.string "title"
     t.datetime "targetted_period", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "achievements", "achievements_lists"
 end

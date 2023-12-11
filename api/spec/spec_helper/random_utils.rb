@@ -5,7 +5,7 @@ module RandomUtils
     end
 
     def self.random_integer(length)
-        [0..9].sample(length).join
+        [*0..9].sample(length).join
     end
 
     def self.random_datetime from = 0.0, to = Time.now

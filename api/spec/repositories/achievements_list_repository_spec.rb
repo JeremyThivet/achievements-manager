@@ -30,15 +30,14 @@ RSpec.describe AchievementsListRepository do
   describe '#create' do
     it 'should return achievements list domain object when creating a new record' do
         # Given a record for week 49
-        title = "myTest"
-        targetted_period = "2023-12-08T16:40:49+00:00"
+        achievements_list_input = AchievementsListInput.new(title: "myTest", targetted_period: "2023-12-08T16:40:49+00:00")
     
         # When
-        result = AchievementsListRecord.create!(title: title, targetted_period: targetted_period)
+        result = AchievementsListRepository.new.create(achievements_list_input)
 
         # Then
-        expect(result.title).to eq("myTest")
-        expect(result.targetted_period).to eq(targetted_period)
+        expect(result.title).to eq(achievements_list_input.title)
+        expect(result.targetted_period).to eq(achievements_list_input.targetted_period)
     end
   end
 end
